@@ -1,4 +1,4 @@
-## AngularJS 2 Starter Kit with Webpack
+## AngularJS 2 Getting started with Webpack
 
 > Running this app
 
