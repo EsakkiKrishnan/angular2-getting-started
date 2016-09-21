@@ -73,6 +73,7 @@ export class HeroesComponent implements OnInit {
      }
     title = 'Tour of Heroes';
     heroes: Hero[];
+    errorMessage:string;
     selectedHero: Hero;
     test: any;
     onSelect(hero: Hero): void {
@@ -81,14 +82,19 @@ export class HeroesComponent implements OnInit {
     }
 
     ngOnInit(): void {
+      // this.heroService.getHeroes().
       // this.heroService.getHeroes().then(function(heroes){
-      //   this.heroes = heroes;
+      // this.heroes = heroes;
       // });
-      console.log("INIT");
-      //console.log(this.heroService.getJson());
-      this.heroService.getJson().then(heroes => console.log(heroes.NSE));
-      console.log(this.test);
-      //this.heroService.getHeroes().then(heroes => console.log(heroes));
+      // console.log("INIT");
+      // //console.log(this.heroService.getJson());
+      // this.heroService.getJson().then(heroes => console.log(heroes.NSE));
+      // console.log(this.test);
+      // //this.heroService.getHeroes().then(heroes => console.log(heroes));
+      this.heroService.getHeroes()
+                   .subscribe(
+                     heroes => this.heroes = heroes,
+                     error =>  this.errorMessage = <any>error);
       
     }
 
