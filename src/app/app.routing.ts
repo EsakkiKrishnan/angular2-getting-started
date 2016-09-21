@@ -10,14 +10,14 @@ const appRoutes: Routes = [
     component: HeroesComponent
   },
   {
-  path: 'dashboard',
-  component: DashboardComponent
- },
- {
-  path: '',
-  redirectTo: '/dashboard',
-  pathMatch: 'full'
-}
+    path: 'dashboard',
+    component: DashboardComponent
+  },
+  {
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
+  }
 ];  
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
